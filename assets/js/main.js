@@ -1,3 +1,8 @@
+// AOS
+AOS.init({
+  duration: 1000, // animation duration in ms
+  once: true     // only animate once on scroll
+});
 // Swiper 1 (Top banner — autoplay enabled)
 const swiper1 = new Swiper('.bannerSwiper', {
   loop: true,

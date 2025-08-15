@@ -416,8 +416,8 @@ footer .container{
 }
 .left-100{
   left: 100%;
-  animation: autoPlay 6s linear infinite;
-  animation-delay: calc((6s / 5) * (var(--position) - 1));
+  animation: autoPlay 10s linear infinite;
+  animation-delay: calc((10s / 5) * (var(--position) - 1));
 }
 @keyframes autoPlay {
   from{
@@ -435,5 +435,48 @@ footer .container{
 .brand .container:hover .col-2{
   animation-play-state: paused!important;
 }
+
+.nav-item {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%; /* dropdown appears below link */
+  left: 0;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.5s ease;
+  z-index: 99;
+}
+
+/* inside menu */
+.dropdown-menu {
+  background: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transform: translateY(-100px);
+  transition: transform 0.5s ease;
+  min-width: 1140px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+/* on hover — reveal dropdown */
+.nav-item:hover .dropdown {
+  height: 130px; /* match actual dropdown height */
+}
+
+.nav-item:hover .dropdown-menu {
+  transform: translateY(0px);
+}
+
 
 
